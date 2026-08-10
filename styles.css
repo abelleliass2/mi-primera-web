@@ -1,8 +1,9 @@
 body {
-    font-family: Arial;
-    background-color: lightblue;
-    text-align: center;
+  font-family: Arial;
+  background-color: lightgreen; /* antes era lightblue */
+  text-align: center;
 }
+
 
 nav {
     margin: 20px;
