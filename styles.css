@@ -3,3 +3,18 @@ body {
     background-color: lightblue;
     text-align: center;
 }
+
+nav {
+    margin: 20px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img {
+    width: 300px;
+    margin-top: 20px;
+}
