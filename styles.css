@@ -1,34 +1,42 @@
-/* Fondo general con La Bombonera */
 body {
-    background-image: url("img/bombonera.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #FFD700; /* amarillo */
-    text-align: center;
-    font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("img/bombonera.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
 }
 
-/* Navegación */
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+}
+
 nav {
-    margin: 20px;
+  background-color: #003366;
+  padding: 10px;
 }
 nav a {
-    color: #FFD700;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
+  color: #ffcc00;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 nav a:hover {
-    color: #FFFFFF;
+  text-decoration: underline;
 }
 
-/* Logo del escudo */
 .logo img {
-    width: 200px;
-    margin-top: 20px;
-    border: 3px solid #FFD700; /* borde amarillo */
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0.6); /* fondo oscuro para resaltar */
-    padding: 5px;
+  margin-top: 20px;
 }
+
+.quiz-item {
+  margin: 20px 0;
+}
+
+button {
+  background-color: #ffcc00;
+  color: #003366;
+  border: none;
+  padding: 10px 20

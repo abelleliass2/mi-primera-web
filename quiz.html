@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz - ¿Qué ídolo de Boca sos?</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Fuentes modernas -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav>
@@ -17,13 +19,16 @@
     <div class="container">
       <h1>Quiz: ¿Qué ídolo de Boca sos?</h1>
 
-      <form id="quiz-form">
+      <form id="quizForm">
         <div class="quiz-item">
           <p>1. ¿Qué estilo te representa más?</p>
           <label><input type="radio" name="q1" value="maradona" required> Liderazgo y decisión.</label>
           <label><input type="radio" name="q1" value="riquelme"> Elegantemente creativo.</label>
           <label><input type="radio" name="q1" value="palermo"> Fuerza y goles importantes.</label>
           <label><input type="radio" name="q1" value="tevez"> Trabajo, intensidad y sacrificio.</label>
+          <label><input type="radio" name="q1" value="battaglia"> Equilibrio y constancia.</label>
+          <label><input type="radio" name="q1" value="guillermo"> Velocidad y habilidad.</label>
+          <label><input type="radio" name="q1" value="ibarra"> Seguridad defensiva.</label>
         </div>
 
         <div class="quiz-item">
@@ -32,6 +37,9 @@
           <label><input type="radio" name="q2" value="riquelme"> Manejando el juego y creando.</label>
           <label><input type="radio" name="q2" value="palermo"> Definiendo en momentos claves.</label>
           <label><input type="radio" name="q2" value="tevez"> Presionando y entregando todo.</label>
+          <label><input type="radio" name="q2" value="battaglia"> Constancia y equilibrio.</label>
+          <label><input type="radio" name="q2" value="guillermo"> Rapidez y desequilibrio.</label>
+          <label><input type="radio" name="q2" value="ibarra"> Seguridad defensiva.</label>
         </div>
 
         <div class="quiz-item">
@@ -40,6 +48,9 @@
           <label><input type="radio" name="q3" value="riquelme"> La magia y la visión.</label>
           <label><input type="radio" name="q3" value="palermo"> La contundencia.</label>
           <label><input type="radio" name="q3" value="tevez"> La entrega total.</label>
+          <label><input type="radio" name="q3" value="battaglia"> Equilibrio y constancia.</label>
+          <label><input type="radio" name="q3" value="guillermo"> Rapidez y habilidad.</label>
+          <label><input type="radio" name="q3" value="ibarra"> Seguridad defensiva.</label>
         </div>
 
         <div class="quiz-item">
@@ -48,10 +59,16 @@
           <label><input type="radio" name="q4" value="riquelme"> “La pausa y la calidad marcan la diferencia.”</label>
           <label><input type="radio" name="q4" value="palermo"> “La historia se escribe con goles.”</label>
           <label><input type="radio" name="q4" value="tevez"> “No hay nada más importante que el equipo.”</label>
+          <label><input type="radio" name="q4" value="battaglia"> “La constancia gana campeonatos.”</label>
+          <label><input type="radio" name="q4" value="guillermo"> “La velocidad cambia partidos.”</label>
+          <label><input type="radio" name="q4" value="ibarra"> “La defensa es la base del triunfo.”</label>
         </div>
 
         <button type="submit">Ver mi resultado</button>
       </form>
+
+      <div id="resultado"></div>
+      <div id="descripcion"></div>
     </div>
   </main>
 
