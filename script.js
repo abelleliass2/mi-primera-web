@@ -2,19 +2,38 @@
 const playerData = {
   maradona: {
     name: 'Diego Maradona',
-    description: 'Sos un líder nato, con personalidad, carácter y una enorme capacidad para decidir partidos.'
+    description: 'Sos un líder nato, con personalidad, carácter y una enorme capacidad para decidir partidos.',
+    image: 'img/maradona.jpg'
   },
   riquelme: {
     name: 'Juan Román Riquelme',
-    description: 'Tenés visión de juego, elegancia y sabés conectar el juego como pocos.'
+    description: 'Tenés visión de juego, elegancia y sabés conectar el juego como pocos.',
+    image: 'img/riquelme.jpg'
   },
   palermo: {
     name: 'Martín Palermo',
-    description: 'Sos contundente, decisivo y siempre aparecés en los momentos importantes.'
+    description: 'Sos contundente, decisivo y siempre aparecés en los momentos importantes.',
+    image: 'img/palermo.jpg'
   },
   tevez: {
-    name: 'Carlos Tevez',
-    description: 'Representás la intensidad, la entrega y el hambre de gloria por cada pelota.'
+    name: 'Carlos Tévez',
+    description: 'Representás la intensidad, la entrega y el hambre de gloria por cada pelota.',
+    image: 'img/tevez.jpg'
+  },
+  battaglia: {
+    name: 'Sebastián Battaglia',
+    description: 'Constancia, equilibrio y títulos que hablan por sí solos.',
+    image: 'img/battaglia.jpg'
+  },
+  guillermo: {
+    name: 'Guillermo Barros Schelotto',
+    description: 'Rapidez, habilidad y desequilibrio por la banda.',
+    image: 'img/guillermo.jpg'
+  },
+  ibarra: {
+    name: 'Hugo Ibarra',
+    description: 'Seguridad defensiva y proyección constante.',
+    image: 'img/ibarra.jpg'
   }
 };
 
@@ -24,7 +43,10 @@ function calcularResultado(formData) {
     maradona: 0,
     riquelme: 0,
     palermo: 0,
-    tevez: 0
+    tevez: 0,
+    battaglia: 0,
+    guillermo: 0,
+    ibarra: 0
   };
 
   for (const value of formData.values()) {
@@ -49,7 +71,10 @@ function mostrarResultado(resultKeys) {
 
   if (resultKeys.length === 1) {
     const player = playerData[resultKeys[0]];
-    resultBox.textContent = `Tu ídolo es ${player.name}.`;
+    resultBox.innerHTML = `
+      <h2>Tu ídolo es ${player.name}</h2>
+      <img src="${player.image}" alt="${player.name}" width="200">
+    `;
     if (description) description.textContent = player.description;
   } else if (resultKeys.length > 1) {
     const nombres = resultKeys.map(key => playerData[key].name).join(' y ');
@@ -62,7 +87,7 @@ function mostrarResultado(resultKeys) {
 
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
-  const quizForm = document.getElementById('quiz-form');
+  const quizForm = document.getElementById('quizForm') || document.getElementById('quiz-form');
 
   if (quizForm) {
     quizForm.addEventListener('submit', (event) => {
@@ -81,4 +106,3 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarResultado(resultKeys);
   }
 });
-
